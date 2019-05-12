@@ -1,0 +1,168 @@
+/*------------------------------
+This page aims to be responsive. A few notes: 
+1. Global items are things that will effect the whole page. Thnigs like section margins, font-size, etc. 
+2. The @media call changes some properties if the screen resolution is small, like looking at it on a phone.
+3. The thumbnail picks are in 3 categories: first, all, last. The first and last are different because I do not want a padding between them and the border. The middle ones have padding on both sides. 
+------------------------------*/
+
+/*------------------------------
+Global
+------------------------------*/
+body {
+  background-color: grey;
+}
+.heading {
+  font-size: 300%;
+}
+.subHeading {
+  text-align: center;
+  font-size: 250%;
+  margin-top: 20px;
+}
+.sectionHeading {
+  text-align: center;
+}
+.text {
+  font-size: 120%;
+}
+.zone {
+  margin: 0 3% 3% 3%;
+  padding: 3%;
+  box-shadow: 0 0 10px 0;
+}
+hr {
+  width: 100%;
+  border-width: 5px;
+  border-color: #000044;
+}
+@media only screen and (max-width: 500px){
+  .navBar {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .navItem {
+    flex-basis: 100%;
+    font-size: 15px !important;
+    padding: 3px !important;
+  }
+  .intro{
+    margin-top: 80px !important;
+  }
+  .listAndPic {
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    justify-content: center;
+  }
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/*------------------------------
+Nav Bar
+------------------------------*/
+.navBar {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.navItem {
+  font-size: 25px;
+  color: white;
+  margin-bottom: 0px;
+  padding: 5px 10px;
+}
+
+/*------------------------------
+Intro
+------------------------------*/
+.intro {
+  margin-top: 40px;
+  background-color: silver;
+}
+.aboutMe {
+  font-size: 140%;
+}
+.listAndPic {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.pic {
+  display: flex;
+  align-items: center;
+}
+.picture {
+  border-radius: 50%;
+}
+/*------------------------------
+Projects
+------------------------------*/
+.projects {
+  background-color: #a1a5ad;
+}
+.projectThumbnails {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+/*-----
+This is used when you dont have enough thumbnails to go across the screen on desktop view. The "justify-content" properity needs to be removed when going to mobile view, so everything can scroll.
+-----*/
+.subThumbnails {
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .projectThumbnails {
+    justify-content: unset;
+    overflow: scroll;
+  }
+}
+/*
+.firstThumbnail {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 10px;
+}
+*/
+.thumbnailPic {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/*
+.lastThumbnail {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 0px;
+}
+*/
+/*------------------------------
+Contact
+------------------------------*/
+.contact {
+  background-color: silver;
+}
+.outreach {
+  text-align: center;
+}
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3%;
+}
+.FCC {
+  border-radius: 50%;
+}
+
+/*------------------------------
+Signature
+------------------------------*/
+.signature {
+  text-align: center;
+}
