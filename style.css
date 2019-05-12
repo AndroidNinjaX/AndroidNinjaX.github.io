@@ -109,6 +109,7 @@ Projects
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  width: 100%;
 }
 /*-----
 This is used when you dont have enough thumbnails to go across the screen on desktop view. The "justify-content" properity needs to be removed when going to mobile view, so everything can scroll.
