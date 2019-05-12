@@ -116,12 +116,6 @@ This is used when you dont have enough thumbnails to go across the screen on des
 .subThumbnails {
   justify-content: center;
 }
-@media (max-width: 500px) {
-  .projectThumbnails {
-    justify-content: unset;
-    overflow: scroll;
-  }
-}
 /*
 .firstThumbnail {
   padding-top: 10px;
